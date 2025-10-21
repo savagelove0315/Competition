@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratchathon Competition Flow Playbook</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for professional look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .section-header {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .role-card {
+            transition: transform 0.2s;
+        }
+        .role-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Mobile adjustments for timeline table */
+        @media (max-width: 767px) {
+            .timeline-table {
+                display: block;
+                width: 100%;
+            }
+            .timeline-table thead {
+                display: none;
+            }
+            .timeline-table tr {
+                margin-bottom: 1rem;
+                display: block;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.75rem;
+                padding: 0.75rem;
+                background-color: white;
+            }
+            .timeline-table td {
+                display: block;
+                text-align: right;
+                padding: 0.25rem 0;
+                font-size: 0.9rem;
+            }
+            .timeline-table td::before {
+                content: attr(data-label);
+                float: left;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: #4b5563;
+                margin-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Header -->
+        <header class="bg-indigo-600 text-white p-6 rounded-xl shadow-2xl mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">SCRATCHATHON COMPETITION FLOW</h1>
+            <p class="mt-2 text-indigo-100 text-lg font-medium">Committee Briefing Playbook: One clean plan for competition day execution.</p>
+            <div class="mt-4 flex flex-wrap gap-4 text-sm font-semibold">
+                <span class="bg-indigo-700 py-1 px-3 rounded-full">Scope: Arrival → Pre-Closing</span>
+                <span class="bg-indigo-700 py-1 px-3 rounded-full">Status: Confirmed</span>
+            </div>
+        </header>
+
+        <!-- Key Logistics Summary -->
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                <h3 class="text-xl font-bold mb-2 text-indigo-600">Venues</h3>
+                <ul class="text-gray-600 space-y-1">
+                    <li>Ground Floor: Foyer (Registration), Maker Space (Briefing, Waiting, Lunch).</li>
+                    <li>First Floor: Event Space (Secondary), Training Room (Primary).</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                <h3 class="text-xl font-bold mb-2 text-indigo-600">Stationing</h3>
+                <ul class="text-gray-600 space-y-1">
+                    <li>Primary (P01-P20): Training Room (1F).</li>
+                    <li>Secondary (S01-S15): Event Space (1F).</li>
+                    <li>*Station numbers match Scratch Account Codes.*</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                <h3 class="text-xl font-bold mb-2 text-indigo-600">Key Policy</h3>
+                <p class="text-gray-600 font-semibold text-sm">LIFT POLICY: Reserved for equipment/VIP only. All contestants MUST use stairs. Marshals run up/down lanes.</p>
+                <div class="mt-2 text-xs text-red-500 font-medium">Enforce UP lane (inner rail) and DOWN lane (outer rail).</div>
+            </div>
+        </div>
+
+        <!-- 1) People & Roles -->
+        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold section-header text-indigo-600">1) People & Roles (The Team)</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <!-- Registration -->
+                <div class="role-card p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <h4 class="font-bold text-lg text-indigo-700">Registration (Foyer)</h4>
+                    <p class="text-sm">Liew Jia Yii: Verify details, obtain signature.</p>
+                    <p class="text-sm">Jennifer Ling: QR scan attendance, contest packs.</p>
+                    <p class="text-sm">Roselind Chai: Collect all required documents.</p>
+                </div>
+
+                <!-- Marshals -->
+                <div class="role-card p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <h4 class="font-bold text-lg text-indigo-700">Marshals & Ushers (Movement/Rooms)</h4>
+                    <p class="text-sm">Primary Marshals (4): Own groups P01-P05, P06-P10, P11-P15, P16-P20.</p>
+                    <p class="text-sm">Secondary Marshals (2 + 1 Usher): Split S01-S15.</p>
+                    <p class="text-sm">Door Guard (2): One at each competition room during active rounds.</p>
+                </div>
+
+                <!-- Judging Leads -->
+                <div class="role-card p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <h4 class="font-bold text-lg text-indigo-700">Judging Leads & Secretariat</h4>
+                    <p class="text-sm">Chief Invigilator (P): Flavian</p>
+                    <p class="text-sm">Chief Invigilator (S): Jerry</p>
+                    <p class="text-sm">Judges: 7 total (1 per group).</p>
+                    <p class="text-sm">Secretariat (Scoring): Joan + Roselind (Event Space).</p>
+                </div>
+
+                <!-- Tech/Venue -->
+                <div class="role-card p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <h4 class="font-bold text-lg text-indigo-700">Venue & Tech Support</h4>
+                    <p class="text-sm">Venue Lead: Ngien Mee Ling (Assist STEMGround on layout/power).</p>
+                    <p class="text-sm">STEMGround Ops: Steven (Lead), Flavian, Jerry, Joan, Lucas, Adam, etc. (35 Chromebooks).</p>
+                </div>
+
+                <!-- Lunch -->
+                <div class="role-card p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <h4 class="font-bold text-lg text-indigo-700">Lunch Team</h4>
+                    <p class="text-sm">Distribution (Maker Space): Wong Ling Ling, Jennifer Ling.</p>
+                </div>
+
+                <!-- Assistant Judges -->
+                <div class="role-card p-4 bg-gray-50 rounded-lg border border-gray-200">
+                    <h4 class="font-bold text-lg text-indigo-700">Assistant Judges (Scoring Handoff)</h4>
+                    <p class="text-sm">Adam, Lucas, Edmund, Xavier, Alfred, Mac, Marcus. Task: Carry score sheets, shadow judges, handoff to Secretariat.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2) Day Timeline (High Level) -->
+        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold section-header text-indigo-600">2) Day Timeline (High Level)</h2>
+            <div class="overflow-x-auto">
+                <table class="timeline-table w-full text-left border-collapse">
+                    <thead class="bg-indigo-50 border-b-2 border-indigo-200 hidden md:table-header-group">
+                        <tr>
+                            <th class="p-3 text-sm font-semibold uppercase tracking-wider text-indigo-700 rounded-tl-lg">Phase</th>
+                            <th class="p-3 text-sm font-semibold uppercase tracking-wider text-indigo-700">Time Estimate</th>
+                            <th class="p-3 text-sm font-semibold uppercase tracking-wider text-indigo-700">What Happens</th>
+                            <th class="p-3 text-sm font-semibold uppercase tracking-wider text-indigo-700 rounded-tr-lg">Who's Responsible</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-base md:text-sm text-indigo-800" data-label="Phase">Arrival & Registration</td>
+                            <td class="p-3 md:text-sm" data-label="Time Estimate">~7:00 - 7:45 am</td>
+                            <td class="p-3 md:text-sm" data-label="What Happens">Check-in, document collection, QR attendance.</td>
+                            <td class="p-3 md:text-sm" data-label="Who's Responsible">Liew / Jennifer / Roselind</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-base md:text-sm text-indigo-800" data-label="Phase">Welcoming Briefing</td>
+                            <td class="p-3 md:text-sm" data-label="Time Estimate">~8:10 am</td>
+                            <td class="p-3 md:text-sm" data-label="What Happens">Format, rules, timing, score agreement (Steven).</td>
+                            <td class="p-3 md:text-sm" data-label="Who's Responsible">Steven, Marshals</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-base md:text-sm text-indigo-800" data-label="Phase">Round 1 — Presentation</td>
+                            <td class="p-3 md:text-sm" data-label="Time Estimate">~8:20 - 9:40 am</td>
+                            <td class="p-3 md:text-sm" data-label="What Happens">Contestants present games at Primary/Secondary rooms.</td>
+                            <td class="p-3 md:text-sm" data-label="Who's Responsible">Marshals, Flavian, Jerry</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-base md:text-sm text-indigo-800" data-label="Phase">Transition A & Setup</td>
+                            <td class="p-3 md:text-sm" data-label="Time Estimate">30 min Tear Down + 20 min Setup</td>
+                            <td class="p-3 md:text-sm" data-label="What Happens">Tear down deco, move to Maker Space. Tech swap for Live Coding.</td>
+                            <td class="p-3 md:text-sm" data-label="Who's Responsible">Marshals, STEMGround, Venue Team</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-base md:text-sm text-indigo-800" data-label="Phase">Round 2 — Live Coding</td>
+                            <td class="p-3 md:text-sm" data-label="Time Estimate">20 min Coding + Judging</td>
+                            <td class="p-3 md:text-sm" data-label="What Happens">Challenge briefing, 20:00 central timer, stop command, judging.</td>
+                            <td class="p-3 md:text-sm" data-label="Who's Responsible">Chiefs, Judges, Marshals</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-base md:text-sm text-indigo-800" data-label="Phase">Transition B & Setup</td>
+                            <td class="p-3 md:text-sm" data-label="Time Estimate">20 min</td>
+                            <td class="p-3 md:text-sm" data-label="What Happens">Swap to fresh 35 Chromebooks pre-logged for Round 3.</td>
+                            <td class="p-3 md:text-sm" data-label="Who's Responsible">STEMGround, Venue Team</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-base md:text-sm text-indigo-800" data-label="Phase">Round 3 — Debugging</td>
+                            <td class="p-3 md:text-sm" data-label="Time Estimate">20 min Challenge + Judging</td>
+                            <td class="p-3 md:text-sm" data-label="What Happens">Same discipline and judging flow as R2. Early release to lunch allowed.</td>
+                            <td class="p-3 md:text-sm" data-label="Who's Responsible">Chiefs, Judges, Marshals</td>
+                        </tr>
+                        <tr class="bg-white hover:bg-gray-50">
+                            <td class="p-3 font-semibold text-base md:text-sm text-indigo-800" data-label="Phase">Post-Rounds & Scoring</td>
+                            <td class="p-3 md:text-sm" data-label="Time Estimate">~12:50 pm onwards</td>
+                            <td class="p-3 md:text-sm" data-label="What Happens">Teams to Maker Space (Lunch). Judges to VIP Lounge (Deliberation).</td>
+                            <td class="p-3 md:text-sm" data-label="Who's Responsible">Lunch Team, Marshals, Steven, Secretariat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 4) Round-by-Round Playbook -->
+        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold section-header text-indigo-600">4) Round-by-Round Playbook</h2>
+
+            <div class="grid lg:grid-cols-2 gap-6">
+
+                <!-- Movement & Room Rules -->
+                <div class="border p-4 rounded-lg bg-indigo-50">
+                    <h3 class="text-xl font-bold mb-3 text-indigo-700">Movement & Room Rules</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li>Seat Check: Before ANY round, Marshals must cross-check: Nametag ↔ Namelist ↔ Station Label ↔ Scratch Account Code.</li>
+                        <li>Maker Space: Quiet zone. Marshals manage staggered release by group to avoid stair congestion.</li>
+                        <li>R1 Tear-down: 30 min window to remove ALL decorations. No new setup.</li>
+                        <li>Stair Waves: Marshals manage stair travel. Release next group only when the stairwell is completely clear.</li>
+                    </ul>
+                </div>
+
+                <!-- Round 1: Presentation of Game -->
+                <div class="border p-4 rounded-lg bg-indigo-50">
+                    <h3 class="text-xl font-bold mb-3 text-indigo-700">Round 1: Presentation</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li>Rooms: Primary → Training Room (1F); Secondary → Event Space (1F).</li>
+                        <li>Early Finishers: Must remain seated. Door Guard prevents exits.</li>
+                        <li>Post-Round: Contestants tear down decorations, then move orderly to Maker Space.</li>
+                    </ul>
+                </div>
+
+                <!-- Round 2 & 3: Live Coding & Debugging -->
+                <div class="lg:col-span-2 border p-4 rounded-lg bg-indigo-50">
+                    <h3 class="text-xl font-bold mb-3 text-indigo-700">Rounds 2 & 3: Live Coding / Debugging (20 min each)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-gray-700">
+                        <li>Briefing: Steven (Primary) & Jerry (Secondary) explain task + scoring before the round start.</li>
+                        <li>Timer: 20:00 central timer. Give a 3:00 warning. STOP on command ("Hands off your keyboard").</li>
+                        <li>Discipline (Marshals): ZERO TOLERANCE for talking, phones, tab switching, or peeking. Marshal notes violation; Chief Invigilator can DQ on repeat offense.</li>
+                        <li>Exit: Contestants remain seated until their whole group is judged and released.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5) Scoring, Handoffs & Data Integrity -->
+        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold section-header text-red-600">5) Scoring & Data Integrity Protocol (CRITICAL)</h2>
+            <div class="p-4 bg-red-50 rounded-lg border-l-4 border-red-500 shadow-inner">
+                <p class="font-bold text-red-800 mb-2">Signature Protocol (After each candidate):</p>
+                <ol class="list-decimal list-inside space-y-2 text-sm text-gray-700">
+                    <li>Judge signs.</li>
+                    <li>Contestant signs (confirming agreement).</li>
+                    <li>Marshal signs as witness (verifying name/station).</li>
+                    <li>Assistant Judge double-checks name/station code, then delivers sheets to Secretariat table (Event Space).</li>
+                </ol>
+                <p class="mt-3 font-semibold text-red-800">Discrepancy Rule:</p>
+                <p class="text-sm text-gray-700">If a score disagreement emerges, Chief Invigilator + Judge resolve on the spot. Note correction on the sheet with both parties' initials.</p>
+            </div>
+        </section>
+
+        <!-- 7) Radios & Short Codes -->
+        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold section-header text-indigo-600">7) Radios & Short Codes</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <span class="bg-gray-100 p-3 rounded-lg text-sm font-semibold">"Rooms green?" (Rooms ready)</span>
+                <span class="bg-gray-100 p-3 rounded-lg text-sm font-semibold">"Release P-A" / "Release S-A" (Send group from Maker Space)</span>
+                <span class="bg-gray-100 p-3 rounded-lg text-sm font-semibold">"Timer started" / "STOP" (Round status)</span>
+                <span class="bg-gray-100 p-3 rounded-lg text-sm font-semibold">"Hold the door" (Door Guard blocks entry/exit)</span>
+                <span class="bg-gray-100 p-3 rounded-lg text-sm font-semibold">"Judge ready Group 2" (Bring next candidate)</span>
+                <span class="bg-gray-100 p-3 rounded-lg text-sm font-semibold">"Sheets to Secretariat" (Send completed score sheets)</span>
+            </div>
+        </section>
+        
+        <!-- 9) Discipline & Appeals -->
+        <section class="mb-10 p-6 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold section-header text-indigo-600">9) Discipline & Appeals</h2>
+            <ul class="list-disc list-inside space-y-2 text-sm text-gray-700 p-4 border rounded-lg">
+                <li>Cheating (phones, tab-switching, peeking): Marshal warns once; Chief Invigilator notes violation. Repeat = Disqualification (PIC to approve).</li>
+                <li>Late Arrivals: Allowed to join the next available slot in Round 1 only. R2/R3 strictly no re-runs.</li>
+                <li>Appeals: Contestant may request a check before signing the score sheet. After signing, scores are final.</li>
+            </ul>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="text-center mt-10 text-gray-500 text-sm">
+            <p>End of Competition Playbook. Please ensure all roles are understood and enforced consistently.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
